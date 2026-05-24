@@ -3,8 +3,5 @@
   publish = ".next"
 
 [build.environment]
+  # Menandakan kita tidak ingin menggunakan plugin legacy
   NEXT_PRIVATE_PREBUILD_GENERATE_ONLY = "true"
-
-# Tambahkan baris ini untuk memaksa Netlify melewati error form
-[[plugins]]
-  package = "@netlify/plugin-nextjs@4"
