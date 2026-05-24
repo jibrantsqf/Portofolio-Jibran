@@ -384,9 +384,7 @@ export default function Home() {
         <section id="contact" className="scroll-mt-24">
           <div className="max-w-2xl mx-auto p-8 md:p-12 rounded-3xl bg-neutral-900/30 border border-neutral-800">
             <div className="text-center mb-10"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Mari Berkolaborasi</h2><p className="text-gray-400"> Punya ide proyek atau butuh solusi berbasis data? Tinggalkan pesan di bawah ini. </p></div>
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className="space-y-6">
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden"><label>Bot field: <input name="bot-field" /></label></p>
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div><label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-300">Nama Lengkap</label><input type="text" id="name" name="name" required className="w-full px-5 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white placeholder-gray-600 focus:border-blue-500 outline-none transition-all" /></div>
                 <div><label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-300">Email Aktif</label><input type="email" id="email" name="email" required className="w-full px-5 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white placeholder-gray-600 focus:border-blue-500 outline-none transition-all" /></div>
