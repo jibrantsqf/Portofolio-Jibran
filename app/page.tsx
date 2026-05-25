@@ -14,20 +14,20 @@ import {
 
 const experiences = [
   {
-    date: "JAN 2025 - PRESENT",
-    title: "Mobile Developer",
-    company: "BANTUIN MOBILE APP",
-    desc: "Mengembangkan aplikasi mobile menggunakan Flutter & Firebase bersama dengan 5 anggota tim"
-  },
-  {
     date: "FEB 2026 - JUL 2026",
     title: "Data Scientist (Internship)",
     company: "SIB Dicoding Coding Camp 2026",
     desc: "Mengikuti program magang jarak jauh selama 6 bulan, menyelesaikan kelas Fundamental Data Analysis dan Beginner Machine Learning, serta mengerjakan Capstone Project Sistem Manajemen Kampanye Terpadu. Bertanggung jawab sebagai Data Scientist dalam merancang sistem analitik untuk UMKM, membangun fitur Budget Optimizer, melakukan preprocessing data, web scraping, dan mengembangkan Campaign Management Dashboard berbasis Streamlit menggunakan Python (Pandas, NumPy, Scikit-learn)."
   },
   {
+    date: "JAN 2025 - 2026",
+    title: "Mobile Developer",
+    company: "BANTUIN MOBILE APP",
+    desc: "Mengembangkan aplikasi mobile menggunakan Flutter & Firebase bersama dengan 5 anggota tim"
+  },
+  {
     date: "DEC 2021 - MAY 2022",
-    title: "Teknisi Komputer",
+    title: "Teknisi Komputer (Internship)",
     company: "Sigit Computer Situbondo",
     desc: "Melakukan troubleshooting & maintenance hardware/software laptop dan PC, menganalisis kebutuhan spesifikasi perangkat sesuai permintaan klien, serta membantu instalasi sistem operasi dan konfigurasi jaringan lokal untuk optimasi performa perangkat."
   }
