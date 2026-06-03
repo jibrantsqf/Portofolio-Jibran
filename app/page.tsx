@@ -143,6 +143,7 @@ const projects = [
     desc: "Aplikasi mobile cross-platform dengan penerapan pengujian fungsional dan performa yang ketat.",
     tech: ["Flutter", "Firebase", "Functional Testing", "Flutter DevTools"],
     link: "https://github.com/nafisfhkr/E-commerce-Bantuin",
+    testingLink: "https://drive.google.com/drive/folders/1ZXZnXl7sx5s3oofuTdkKxElAw_f4lcXF?usp=sharing",
     image: "Bantuin.png",
     detailDesc: "Aplikasi e-commerce penyedia jasa lokal. Selain mengembangkan antarmuka dan integrasi Firebase, proyek ini melalui fase Quality Assurance yang komprehensif. Mencakup functional & integration testing pada modul pembayaran/notifikasi, serta performance profiling menggunakan Flutter DevTools untuk memastikan kelancaran (60 FPS) dan efisiensi memori."
   }
@@ -191,7 +192,7 @@ export default function Home() {
         </h1>
         
         <p className="text-lg md:text-xl relative z-10 text-gray-300 mb-12 max-w-2xl font-light px-4"> 
-          Software Developer | QA Tester | Data Science Enthusiast
+          Software Developer | Data Science Enthusiast
         </p>
         
         <div className="relative z-10 flex flex-col items-center gap-10">
@@ -220,7 +221,7 @@ export default function Home() {
             <div className="flex justify-center lg:justify-start w-full"> 
               <ProfileCard 
                 name="Jibran Tsaqif" 
-                title="QA Tester & Software Developer" 
+                title="DAta Science & Software Developer" 
                 handle="jibrantsaqif" 
                 avatarUrl="/profile.jpg" 
                 miniAvatarUrl="/profile.jpg" 
@@ -453,10 +454,23 @@ export default function Home() {
               </div>
 
               {/* Tombol Action Bottom */}
-              <div className="mt-auto pt-6 border-t border-neutral-800">
-                <a href={selectedProject.link} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center px-8 py-3.5 border border-neutral-700 bg-transparent text-white text-xs font-bold uppercase tracking-widest rounded-xl hover:bg-neutral-800 transition-colors gap-3 w-full sm:w-max">
-                  <SiGithub className="text-base" /> GitHub
-                </a>
+              <div className="mt-auto pt-6 border-t border-neutral-800 flex flex-wrap gap-4">
+                {/* Tombol GitHub (Selalu muncul jika ada link) */}
+                {selectedProject.link && (
+                  <a href={selectedProject.link} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center px-8 py-3.5 border border-neutral-700 bg-transparent text-white text-xs font-bold uppercase tracking-widest rounded-xl hover:bg-neutral-800 transition-colors gap-3 w-full sm:w-max">
+                    <SiGithub className="text-base" /> GitHub
+                  </a>
+                )}
+
+                {/* Tombol Bukti Testing (Hanya muncul jika testingLink diisi) */}
+                {selectedProject.testingLink && (
+                  <a href={selectedProject.testingLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center px-8 py-3.5 border border-blue-600/30 bg-blue-600/10 text-blue-400 text-xs font-bold uppercase tracking-widest rounded-xl hover:bg-blue-600/20 transition-colors gap-3 w-full sm:w-max">
+                    <svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                    </svg>
+                    Bukti Testing
+                  </a>
+                )}
               </div>
 
             </div>
