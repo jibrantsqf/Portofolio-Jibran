@@ -21,9 +21,9 @@ const experiences = [
   },
   {
     date: "JAN 2025 - 2026",
-    title: "Mobile Developer",
+    title: "Mobile Developer & QA Tester",
     company: "BANTUIN MOBILE APP",
-    desc: "Mengembangkan aplikasi mobile menggunakan Flutter & Firebase bersama dengan 5 anggota tim"
+    desc: "Mengembangkan antarmuka frontend aplikasi mobile menggunakan Flutter & Firebase bersama 5 anggota tim. Merancang dan mengeksekusi functional dan integration test cases untuk modul kritis, serta melakukan performance testing dan profiling secara ekstensif menggunakan Flutter DevTools untuk memastikan stabilitas FPS, waktu startup, dan efisiensi memori."
   },
   {
     date: "DEC 2021 - MAY 2022",
@@ -43,27 +43,27 @@ const educations = [
   {
     date: "2020 - 2023",
     title: "SMKN 1 PANJI SITUBONDO",
-    subtitle: "Teknik Komputer dan Jaringan(TKJ)",
+    subtitle: "Teknik Komputer dan Jaringan (TKJ)",
     desc: "Pendidikan menengah atas dengan fokus pada teknik komputer dan jaringan."
   }
 ];
 
 const skillCategories = [
   {
+    category: "DATA SCIENCE & MACHINE LEARNING",
+    skills: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"]
+  },
+  {
+    category: "SOFTWARE QUALITY ASSURANCE",
+    skills: ["Manual Testing", "Functional & Integration Testing", "Performance Testing", "Apache JMeter", "Postman", "Flutter DevTools"]
+  },
+  {
     category: "FLUTTER DEVELOPMENT",
     skills: ["Flutter", "Dart", "Firebase"]
   },
   {
-    category: "BACK-END DEVELOPMENT",
-    skills: ["Laravel", "Laravel RestAPI", "PHP", "SQL / MySQL"]
-  },
-  {
-    category: "WEBSITE DEVELOPMENT",
-    skills: ["HTML", "CSS", "Laravel Framework"]
-  },
-  {
-    category: "DATA SCIENCE & MACHINE LEARNING",
-    skills: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"]
+    category: "BACK-END & WEB DEVELOPMENT",
+    skills: ["Laravel", "REST API", "PHP", "SQL / MySQL", "HTML", "CSS"]
   }
 ];
 
@@ -73,6 +73,7 @@ const tools = [
   { name: 'NumPy', icon: SiNumpy, color: '#013243' },
   { name: 'Scikit-Learn', icon: SiScikitlearn, color: '#F7931E' },
   { name: 'Streamlit', icon: SiStreamlit, color: '#FF4B4B' },
+  { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
   { name: 'Flutter', icon: SiFlutter, color: '#02569B' },
   { name: 'Laravel', icon: SiLaravel, color: '#FF2D20' },
   { name: 'Dart', icon: SiDart, color: '#0175C2' },
@@ -81,7 +82,6 @@ const tools = [
   { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
   { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
   { name: 'Figma', icon: SiFigma, color: '#F24E1E' },
-  { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
   { name: 'GitHub', icon: SiGithub, color: '#ffffff' }
 ];
 
@@ -131,20 +131,20 @@ const projects = [
     category: "BACKEND DEVELOPMENT",
     role: "Backend Developer",
     desc: "Pengembangan RESTful API menggunakan arsitektur yang solid untuk aplikasi kasir.",
-    tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS"],
+    tech: ["Laravel", "PHP", "MySQL", "Postman API"],
     link: "https://github.com/jibrantsqf/API-Kasir-Pintar-Laravel",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-    detailDesc: "Sistem kasir berbasis web yang mencakup manajemen stok, transaksi, diskon, hingga laporan hutang-piutang. Menerapkan RESTful API standar dengan otentikasi JWT dan validasi input yang ketat."
+    detailDesc: "Sistem kasir berbasis web yang mencakup manajemen stok, transaksi, diskon, hingga laporan hutang-piutang. Menerapkan RESTful API standar dengan otentikasi JWT, diuji secara menyeluruh menggunakan Postman untuk validasi endpoint."
   },
   {
     title: "E-Commerce Bantuin",
-    category: "MOBILE DEVELOPMENT",
-    role: "Mobile Developer",
-    desc: "Aplikasi mobile cross-platform untuk e-commerce lokal.",
-    tech: ["Flutter", "Dart", "Firebase", "Agile/Scrum"],
+    category: "MOBILE DEV & QA",
+    role: "Mobile Developer & QA Tester",
+    desc: "Aplikasi mobile cross-platform dengan penerapan pengujian fungsional dan performa yang ketat.",
+    tech: ["Flutter", "Firebase", "Functional Testing", "Flutter DevTools"],
     link: "https://github.com/nafisfhkr/E-commerce-Bantuin",
     image: "Bantuin.png",
-    detailDesc: "Aplikasi e-commerce penyedia jasa untuk perbaikan kendaraan dan barang elektronik. Memiliki fitur autentikasi, manajemen layanan, dan integrasi real-time menggunakan arsitektur Firebase."
+    detailDesc: "Aplikasi e-commerce penyedia jasa lokal. Selain mengembangkan antarmuka dan integrasi Firebase, proyek ini melalui fase Quality Assurance yang komprehensif. Mencakup functional & integration testing pada modul pembayaran/notifikasi, serta performance profiling menggunakan Flutter DevTools untuk memastikan kelancaran (60 FPS) dan efisiensi memori."
   }
 ];
 
@@ -191,7 +191,7 @@ export default function Home() {
         </h1>
         
         <p className="text-lg md:text-xl relative z-10 text-gray-300 mb-12 max-w-2xl font-light px-4"> 
-          Software Developer | Data Science & Machine Learning Enthusiast. 
+          Software Developer | QA Tester | Data Science Enthusiast
         </p>
         
         <div className="relative z-10 flex flex-col items-center gap-10">
@@ -220,7 +220,7 @@ export default function Home() {
             <div className="flex justify-center lg:justify-start w-full"> 
               <ProfileCard 
                 name="Jibran Tsaqif" 
-                title="Data Scientist & Software Developer" 
+                title="QA Tester & Software Developer" 
                 handle="jibrantsaqif" 
                 avatarUrl="/profile.jpg" 
                 miniAvatarUrl="/profile.jpg" 
@@ -231,10 +231,10 @@ export default function Home() {
             <div className="space-y-6">
               <div className="space-y-6 text-lg text-gray-400 leading-relaxed font-light">
                 <p> 
-                  Mahasiswa Politeknik Negeri Banyuwangi dan calon Data Scientist dengan keahlian kuat dalam analisis data, machine learning, dan pengembangan perangkat lunak. Berpengalaman membangun solusi berbasis data dan API menggunakan Python, Laravel, dan Flutter, termasuk pembuatan sistem manajemen kampanye terintegrasi yang memanfaatkan kecerdasan buatan. Termotivasi untuk menerapkan pemodelan algoritma tingkat lanjut dan teknik ekstraksi data guna mendukung pengambilan keputusan yang strategis dan berdampak di dunia profesional. 
+                  Mahasiswa Politeknik Negeri Banyuwangi dengan keahlian kuat dalam Quality Assurance (QA), pengembangan perangkat lunak, dan analisis data. Berpengalaman membangun sekaligus melakukan pengujian fungsional dan performa pada aplikasi menggunakan Python, Laravel, dan Flutter. Saya memiliki ketertarikan tinggi pada integrasi sistem yang stabil dan optimal melalui pengujian yang terstruktur.
                 </p>
                 <p> 
-                  Saat ini saya tergabung dalam program SIB Dicoding Coding Camp 2026 sebagai salah satu milestone dalam learning path Data Science yang saya jalani. Fokus saya adalah memperdalam keterampilan mulai dari eksplorasi data, analisis statistik, hingga pengembangan model prediktif dan aplikasi berbasis data yang efisien. 
+                  Saat ini saya tergabung dalam program SIB Dicoding Coding Camp 2026. Fokus saya adalah memperluas keterampilan teknis dari eksplorasi data, pengujian sistem dengan standar industri (seperti JMeter dan Postman), hingga pengembangan aplikasi yang efisien dan bebas dari bug. 
                 </p>
               </div>
             </div>
@@ -326,7 +326,7 @@ export default function Home() {
               SKILLSET <span className="text-blue-500 font-light">|</span> <span className="text-neutral-500 font-light">TECH STACK</span> 
             </h2>
             <p className="text-sm md:text-base font-light text-neutral-400 tracking-wide max-w-2xl"> 
-              Kurasi alat dan teknologi yang saya andalkan untuk membangun solusi perangkat lunak yang tangguh dan model analitik berbasis data. 
+              Kurasi alat dan teknologi yang saya andalkan untuk membangun dan menguji solusi perangkat lunak yang tangguh.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"> 
@@ -383,7 +383,7 @@ export default function Home() {
         {/* --- CONTACT SECTION --- */}
         <section id="contact" className="scroll-mt-24">
           <div className="max-w-2xl mx-auto p-8 md:p-12 rounded-3xl bg-neutral-900/30 border border-neutral-800">
-            <div className="text-center mb-10"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Mari Berkolaborasi</h2><p className="text-gray-400"> Punya ide proyek atau butuh solusi berbasis data? Tinggalkan pesan di bawah ini. </p></div>
+            <div className="text-center mb-10"><h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Mari Berkolaborasi</h2><p className="text-gray-400"> Punya ide proyek atau butuh QA Tester / Software Developer? Tinggalkan pesan di bawah ini. </p></div>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div><label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-300">Nama Lengkap</label><input type="text" id="name" name="name" required className="w-full px-5 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white placeholder-gray-600 focus:border-blue-500 outline-none transition-all" /></div>
